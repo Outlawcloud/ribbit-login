@@ -1,0 +1,347 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/callie-chalk-font" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        /* fallback for old browsers */
+        .gradient-custom-2 {
+            /* background-image: url('https://tse2.mm.bing.net/th?id=OIP.X0C5WPd1n3wpazGKim08fQHaFj&pid=Api&P=0');s */
+            /* background-color: black; */
+            background-image: linear-gradient(white,white 60%, #2aabe1);
+            /* background-repeat: no-repeat; */
+            /* background-attachment: fixed; */
+            /* background-position: top; */
+            /* Chrome 10-25, Safari 5.1-6 */
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .rotate_image {
+            -webkit-transform: rotate(5deg);
+            -moz-transform: rotate(5deg);
+            -ms-transform: rotate(5deg);
+            -o-transform: rotate(5deg);
+            transform: rotate(5deg);
+        }
+
+        .first-txt {
+            position: absolute;
+            top: 67px;
+            left: 50px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .second-txt {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+        }
+
+        .gfg {
+            margin: 3%;
+            position: relative;
+            bottom: 160px;
+            right: 130px;
+        }
+
+        div.text-white div.right-title {
+            text-shadow: 5px 5px 5px black;
+            font-size: 2em;
+            font-weight: bold;
+            padding-bottom: 20px;
+            border-bottom: 5px solid white;
+        }
+
+        div.text-white p {
+            padding-top: 20px;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .textShadow {
+            text-shadow: 5px 5px 5px black;
+        }
+
+        @media (min-width: 768px) {
+            .gradient-form {
+                height: 100vh !important;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .gradient-custom-2 {
+                border-top-right-radius: 0.3rem;
+                border-bottom-right-radius: 0.3rem;
+            }
+        }
+
+        /* frog */
+        .frog {
+            width: 5em;
+            height: 2em;
+            color: forestgreen;
+            background:
+                radial-gradient(circle at 4.2em 1.4em,
+                    #333 0.15em,
+                    transparent 0.15em),
+                currentColor;
+            border-radius: 70% 90% 60% 50%;
+            position: relative;
+            box-shadow: -0.2em 1em 0 -0.75em #333;
+            z-index: 1;
+            animation: hop 1s linear infinite;
+        }
+
+        @keyframes hop {
+            230% {
+                transform: rotate(-10deg) translate(1em, -2em);
+                box-shadow: -0.2em 3em 0 -1em #333;
+            }
+
+            40% {
+                transform: rotate(10deg) translate(3em, -4em);
+                box-shadow: -0.2em 3.25em 0 -1.1em #333;
+            }
+
+            60%,
+            75% {
+                transform: rotate(0deg) translate(4em, 0);
+                box-shadow: -0.2em 1em 0 -0.75em #333;
+            }
+        }
+
+
+        /* tail and legs */
+        .frog::after {
+            content: '';
+            position: absolute;
+            width: 1em;
+            height: 2em;
+            /* background-color: yellow; */
+            border-radius: 50%;
+            top: 0.5em;
+            left: -0.3em;
+            box-shadow:
+                0.5em 1em 0,
+                4em 1em 0 -0.2em,
+                4em 1em 0 -0.2em;
+            animation: kick 1s linear infinite;
+        }
+
+        @keyframes kick {
+            40% {
+                box-shadow:
+                    0.5em 2em 0,
+                    1.75em 0 -0.2em,
+                    4em 1.9em 0 -0.2em;
+            }
+        }
+
+        .lilypad {
+            width: 2em;
+            height: 2em;
+            color: greenyellow;
+            background-color: currentColor;
+            transform: translate(0, -5em);
+            border-radius: 100%;
+            position: relative;
+            bottom: -80px;
+            left: 80px;
+
+            animation: lilypad 1s linear infinite;
+            filter: opacity(0);
+        }
+
+        @keyframes lilypad {
+            40% {
+                transform: translate(-3em, -5em);
+                filter: opacity(0.75);
+            }
+
+            55% {
+                transform: translate(-4em, -5em);
+                filter: opacity(0);
+            }
+        }
+
+        .lilypad::before,
+        .lilypad::after {
+            content: '';
+            position: absolute;
+            background-color: currentColor;
+            bottom: 0;
+        }
+
+        .lilypad::before {
+            /* width: 1.25em; */
+            /* height: 1.25em; */
+            border-radius: 100% 100% 0 100%;
+            left: -30%;
+        }
+
+        .lilypad::after {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 100% 100% 100% 0;
+            right: -30%;
+        }
+
+        .lilypad,
+        .lilypad::before,
+        .lilypad::after {
+            box-shadow:
+                -2em 2em 0,
+                5em 2em 0 -0.3em;
+        }
+
+        /* end of frog */
+
+        /* wave */
+        .sea {
+            width: 300px;
+            height: 300px;
+            /* background-color: whitesmoke;
+    background-image: linear-gradient(
+        darkblue,
+        rgba(255, 255, 255, 0) 80%,
+        rgba(255, 255, 255, 0.5)
+    ); */
+            /* border-radius: 5px; */
+            /* box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2); */
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+        .sea .wave {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            background-color: deepskyblue;
+            top: 250px;
+            left: -100px;
+            filter: opacity(0.4);
+            border-radius: 43%;
+            animation: drift linear infinite;
+            transform-origin: 50% 48%;
+        }
+
+        .sea .wave:nth-of-type(1) {
+            animation-duration: 5s;
+        }
+
+        .sea .wave:nth-of-type(2) {
+            animation-duration: 7s;
+        }
+
+        .sea .wave:nth-of-type(3) {
+            animation-duration: 9s;
+            background-color: red;
+            filter: opacity(0.1);
+        }
+
+        @keyframes drift {
+            from {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* wave end */
+    </style>
+</head>
+
+<body>
+    <section class="h-100 gradient-form">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+                                    <div class="text-center">
+                                        <img src="https://ribbitlearning.blob.core.windows.net/user-flow-templates/Ribbit-fav-icon@200x-8.png"
+                                            style="width: 185px;" alt="logo">
+                                        <h4 class="mt-1 mb-5 pb-1">We are Ribbit Learning</h4>
+                                    </div>
+
+                                    <form>
+                                        <p>Please login to your account</p>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="form2Example11">Username</label>
+                                            <input type="email" id="form2Example11" class="form-control"
+                                                placeholder="Phone number or email address" />
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="form2Example22">Password</label>
+                                            <input type="password" id="form2Example22" class="form-control" />
+                                        </div>
+
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <button class="btn btn-primary mb-3" type="button">Log
+                                                in</button>
+                                            <div class="forgot-password">
+                                                <a class="text-muted" href="#!">Forgot password?</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-center pb-4">
+                                            <p class="mb-0 me-2">Don't have an account?</p>
+                                            <button type="button" class="btn btn-outline-danger">Create new</button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                                <div class="modal-color">
+                                    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                        <div class="login">
+                                            <div class="gfg">
+                                                <img class="rotate_image"
+                                                    src="https://tse2.mm.bing.net/th?id=OIP.X0C5WPd1n3wpazGKim08fQHaFj&pid=Api&P=0"
+                                                    alt="">
+                                                <h5 class="first-txt">Are you ready to take control of your own
+                                                    customized professional development, select a virtual peer-to-peer
+                                                    coach, and
+                                                    collaborate with an expanded network of colleagues? It's just a
+                                                    click away...</h5>
+
+                                            </div>
+                                            <!-- We help K-12 schools develop & retain teachers -->
+                                        </div>
+                                        <div class="frog"></div>
+                            <div class="lilypad"></div>
+                                        <!-- <p class="textShadow">The Ribbit Learning Hub is the first solution designed to
+                                help schools retain their educators by bringing solutions we
+                                know work, to scale</p>
+                            <p class="textShadow">It empowers every educator to drive their own
+                                customized professional development & provides coaching & collaboration
+                                opportunities regardless of their grade level, content area or where they teach.</p> -->
+                                    </div>
+                                    <div class="sea"><span class="wave"></span>
+                                    <span class="wave"></span>
+                                    <span class="wave"></span>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</body>
+
+</html>

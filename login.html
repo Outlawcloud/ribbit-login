@@ -1,0 +1,216 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <link href="http://fonts.cdnfonts.com/css/callie-chalk-font" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <style>
+        /* fallback for old browsers */
+        .gradient-custom-2 {
+            /* background-image: url('https://tse2.mm.bing.net/th?id=OIP.X0C5WPd1n3wpazGKim08fQHaFj&pid=Api&P=0');s */
+            background-color: #d7e4ec;
+            /* background-image: linear-gradient(white,white 60%, #2aabe1); */
+            /* background-repeat: no-repeat; */
+            /* background-attachment: fixed; */
+            /* background-position: top; */
+        /* Chrome 10-25, Safari 5.1-6 */
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .rotate_image {
+            /* -webkit-transform: rotate(5deg);
+            -moz-transform: rotate(5deg);
+            -ms-transform: rotate(5deg);
+            -o-transform: rotate(5deg);
+            transform: rotate(5deg); */
+        }
+
+        .first-txt {
+            position: absolute;
+            top: 67px;
+            left: 50px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .second-txt {
+            position: relative;
+            top: -10px;
+            left: -10px;
+        }
+
+        .gfg {
+            margin: 3%;
+            position: relative;
+            bottom: 20px;
+            right: 96px;
+        }
+
+        div.text-white div.right-title {
+            text-shadow: 5px 5px 5px black;
+            font-size: 2em;
+            font-weight: bold;
+            padding-bottom: 20px;
+            border-bottom: 5px solid white;
+        }
+        div.text-white p {
+            padding-top: 20px;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+        .textShadow {
+            text-shadow: 5px 5px 5px black;
+        }
+        @media (min-width: 768px) {
+            .gradient-form {
+                height: 100vh !important;
+        }
+        }
+        @media (min-width: 769px) {
+            .gradient-custom-2 {
+                border-top-right-radius: 0.3rem;
+                border-bottom-right-radius: 0.3rem;
+        }
+        }
+
+      #api #button {
+        background-color:red;
+        
+        
+      }
+
+    
+
+    </style>
+    </head>
+    
+    <body>
+        <section class="h-100 gradient-form">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                        <div class="card-body p-md-5 mx-md-4">
+                            <div class="text-center">
+                            <img src="https://ribbitlearning.blob.core.windows.net/user-flow-templates/Ribbit-fav-icon@200x-8.png" style="width: 185px;"
+                                alt="logo">
+                            <h4 class="mt-1 mb-5 pb-1">We are Ribbit Learning</h4>
+                            </div>
+                            <div id="api" data-name="Unified">
+                                <!-- work off start -->
+                                <form id="localAccountForm" action="JavaScript:void(0);" class="localAccount"
+                                    aria-label="Sign in with your email address">
+                                    <div class="intro">
+                                        <h2 aria-level="1">
+                                            Sign in with your email address
+                                        </h2>
+                                    </div>
+                                    <div class="error pageLevel" aria-hidden="true" role="alert" style="display: none;">
+                                        <p></p>
+                                    </div>
+                                    <div class="entry">
+                                        <div class="entry-item">
+                                            <label for="email">
+                                                Email Address
+                                            </label>
+                                            <div class="error itemLevel" aria-hidden="true" role="alert" style="display: none;">
+                                                <p></p>
+                                            </div>
+                                            <input type="email" id="email" name="Email Address" title="Please enter a valid Email Address"
+                                                pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"
+                                                autofocus="" placeholder="Email Address" aria-label="Email Address">
+                                        </div>
+                                        <div class="entry-item">
+                                            <div class="password-label">
+                                                <label for="password">Password</label>
+                                                <a id="forgotPassword"
+                                                    href="/ribbitlearningco.onmicrosoft.com/B2C_1_SignIn/api/CombinedSigninAndSignup/unified?claimsexchange=ForgotPassword&amp;csrf_token=N1orSEp0b0ZuRVdKSjJISXppd1h2SDdJaTVNbldrYmdEQXJnQU1Ya1lDcmdhcVh6MWhhc01HV0x1SnppNDBLOS9zMlAzcFQrMG91KzA4SFJqWG1VWkE9PTsyMDIyLTEwLTE0VDA0OjU2OjE1LjI0OTE2NDJaO2xOSSt1NFhtM1lEMjMwSHF2MmR5b2c9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiI1MDFlNWM2OS05NjE1LTRlODAtOWEzMC05NzRkNTkwYTUzNDgifQ&amp;p=B2C_1_SignIn">Forgot
+                                                    your password?</a>
+                                            </div>
+                                            <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                                                <p role="alert"></p>
+                                            </div>
+                                            <input type="password" id="password" name="Password" placeholder="Password" aria-label="Password"
+                                                autocomplete="current-password" aria-required="true">
+                                        </div>
+                                        <div class="working"></div>
+                            
+                            
+                                        <div class="buttons">
+                                            <button id="next" type="submit" form="localAccountForm">Sign in</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- work off end -->
+                            </div>
+                            <!-- <form>
+                            <p>Please login to your account</p>
+            
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form2Example11">Username</label>
+                                <input type="email" id="form2Example11" class="form-control"
+                                placeholder="Phone number or email address" />
+                            </div>
+            
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form2Example22">Password</label>
+                                <input type="password" id="form2Example22" class="form-control" />
+                            </div>
+            
+                            <div class="text-center pt-1 mb-5 pb-1">
+                                <button class="btn btn-primary mb-3" type="button">Log
+                                in</button>
+                                <div class="forgot-password">
+                                <a class="text-muted" href="#!">Forgot password?</a>
+                                </div>
+                            </div>
+            
+                            <div class="d-flex align-items-center justify-content-center pb-4">
+                                <p class="mb-0 me-2">Don't have an account?</p>
+                                <button type="button" class="btn btn-outline-danger">Create new</button>
+                            </div>
+            
+                            </form> -->
+            
+                        </div>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                        <div class="modal-color">
+                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                            <div class="">
+                                <div class="">
+                                    <h3 style="color:#1c2050; text-align: center">Not all superheroes wear capes</h3>
+                                    <!-- <img class="" src="images/teacher-group2.svg" alt=""/> -->
+                                     <img class="second-txt" src="images/teacher-group2.svg" alt=""/>
+                                        <h5 style="color:#1c2050; text-align: center;" class="">Are you ready to take control of your own customized professional development, select a virtual peer-to-peer coach, and
+                                            collaborate with an expanded network of colleagues? 
+                                        </h5>
+                                        <h5 style="color:#1c2050; text-align: center" >It's just a click away...</h5>
+                                </div>
+                                <!-- We help K-12 schools develop & retain teachers -->
+                            </div>
+                            
+                            <!-- <p class="textShadow">The Ribbit Learning Hub is the first solution designed to
+                                help schools retain their educators by bringing solutions we
+                                know work, to scale</p>
+                            <p class="textShadow">It empowers every educator to drive their own
+                                customized professional development & provides coaching & collaboration
+                                opportunities regardless of their grade level, content area or where they teach.</p> -->
+                            </div>
+                              
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+        </section>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    </body>
+</html>
+
+
