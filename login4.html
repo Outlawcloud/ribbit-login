@@ -1,0 +1,224 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/callie-chalk-font" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap-reboot.css" rel="stylesheet"> -->
+    <style>
+        /* fallback for old browsers */
+        .gradient-custom-2 {
+            /* background-image: url('https://tse2.mm.bing.net/th?id=OIP.X0C5WPd1n3wpazGKim08fQHaFj&pid=Api&P=0');s */
+            background-color: #d7e4ec;
+            /* background-image: linear-gradient(white,white 60%, #2aabe1); */
+            /* background-repeat: no-repeat; */
+            /* background-attachment: fixed; */
+            /* background-position: top; */
+            /* Chrome 10-25, Safari 5.1-6 */
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .image-container {
+            width: 200;
+            height: 200;
+            position: relative;
+            /* top: 1001; */
+            /* right: 1110; */
+        }
+
+        .rotate_image {
+            /* -webkit-transform: rotate(5deg);
+            -moz-transform: rotate(5deg);
+            -ms-transform: rotate(5deg);
+            -o-transform: rotate(5deg);
+            transform: rotate(5deg); */
+        }
+
+        .first-txt {
+            position: absolute;
+            top: 67px;
+            left: 50px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .second-txt {
+            position: relative;
+            top: -10px;
+            left: -10px;
+        }
+
+        .gfg {
+            margin: 3%;
+            position: relative;
+            bottom: 20px;
+            right: 96px;
+        }
+
+        div.text-white div.right-title {
+            text-shadow: 5px 5px 5px black;
+            font-size: 2em;
+            font-weight: bold;
+            padding-bottom: 20px;
+            border-bottom: 5px solid white;
+        }
+
+        div.text-white p {
+            padding-top: 20px;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .textShadow {
+            text-shadow: 5px 5px 5px black;
+        }
+
+        @media (min-width: 768px) {
+            .gradient-form {
+                height: 100vh !important;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .gradient-custom-2 {
+                border-top-right-radius: 0.3rem;
+                border-bottom-right-radius: 0.3rem;
+            }
+        }
+
+        #api[data-name=Unified] {
+            display: center;
+            /* color:red; */
+            color: #1c2050;
+
+        }
+
+        #api[data-name=Unified] #localAccountForm .intro {
+            /* overflow: hidden; */
+            display: none;
+
+            /* color:red; */
+        }
+
+        #api[data-name=Unified] #next {
+            color: #1c2050;
+            position: relative;
+            top: 55px;
+            left: 90px;
+            width: 35%;
+            color: white;
+            background-color: #1c2050;
+            border-radius: 12px;
+        }
+
+        #api[data-name=Unified] #email {
+            width: 255px;
+            /* color:red; */
+            position: relative;
+
+            top: 10px;
+            right: -30px;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            border-bottom: 2px solid black;
+        }
+
+        /* #api[data-name=Unified] .password-label{
+           
+            display: none;
+        } */
+        #api[data-name=Unified] label {
+            /* color:#1c2050;
+            position: relative;
+            top: 25px;
+            right: -1px; */
+            display: none;
+        }
+
+        #api[data-name=Unified] #password {
+            width: 255px;
+            position: relative;
+            top: 15px;
+            right: -30px;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            border-bottom: 2px solid black;
+
+        }
+
+        #api[data-name=Unified] #forgotPassword {
+
+            position: relative;
+            bottom: -70px;
+            right: -75px;
+            padding-top: 100px;
+        }
+
+
+
+        .new {
+            position: relative;
+            bottom: -30px;
+            left: 117px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="h-100 gradient-form">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+                                    <div class="text-center">
+                                        <img class="image-container"
+                                            src="https://ribbitlearning.blob.core.windows.net/user-flow-templates/login-logo.png"
+                                            alt="">
+                                        <h4 style="color:#1c2050; position: relative; top: 20px ;"
+                                            class="mt-1 mb-5 pb-1">We are Ribbit Learning</h4>
+                                    </div>
+                                        <div id="api" data-name="Unified">
+                                        </div>
+                                    </div>
+                                <div class="new">New to Ribbit?
+                                    <a href="">Contact Us</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                                <div class="modal-color">
+                                    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                        <div class="">
+                                            <div class="">
+                                                <h3 style="color:#1c2050; text-align: center">Not all superheroes wear capes</h3>
+                                               <img class="second-txt"
+                                                    src="https://ribbitlearning.blob.core.windows.net/user-flow-templates/teacher-group2.svg"
+                                                    alt="" />
+                                                <h5 style="color:#1c2050; text-align: center;" class="">Are you ready to
+                                                    take control of your own customized professional development, select
+                                                    a virtual peer-to-peer coach, and
+                                                    collaborate with an expanded network of colleagues?
+                                                </h5>
+                                                <h5 style="color:#1c2050; text-align: center">It's just a click away...
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</body>
+
+</html>
