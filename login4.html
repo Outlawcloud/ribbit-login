@@ -11,30 +11,15 @@
     <style>
         /* fallback for old browsers */
         .gradient-custom-2 {
-            /* background-image: url('https://tse2.mm.bing.net/th?id=OIP.X0C5WPd1n3wpazGKim08fQHaFj&pid=Api&P=0');s */
+            display: flexbox;
             background-color: #d7e4ec;
-            /* background-image: linear-gradient(white,white 60%, #2aabe1); */
-            /* background-repeat: no-repeat; */
-            /* background-attachment: fixed; */
-            /* background-position: top; */
-            /* Chrome 10-25, Safari 5.1-6 */
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            /* border: 1px solid black; */
         }
 
         .image-container {
             width: 200;
             height: 200;
             position: relative;
-            /* top: 1001; */
-            /* right: 1110; */
-        }
-
-        .rotate_image {
-            /* -webkit-transform: rotate(5deg);
-            -moz-transform: rotate(5deg);
-            -ms-transform: rotate(5deg);
-            -o-transform: rotate(5deg);
-            transform: rotate(5deg); */
         }
 
         .first-txt {
@@ -95,6 +80,11 @@
 
         }
 
+        #api[data-name=Unified] form{
+            display:flex;
+            justify-content: center;
+        }
+
         #api[data-name=Unified] #localAccountForm .intro {
             /* overflow: hidden; */
             display: none;
@@ -103,6 +93,7 @@
         }
 
         #api[data-name=Unified] #next {
+            margin:1.5rem;
             color: #1c2050;
             position: relative;
             top: 55px;
@@ -114,7 +105,7 @@
         }
 
         #api[data-name=Unified] #email {
-            width: 255px;
+            width: 350px;
             /* color:red; */
             position: relative;
 
@@ -126,20 +117,13 @@
             border-bottom: 2px solid black;
         }
 
-        /* #api[data-name=Unified] .password-label{
-           
-            display: none;
-        } */
         #api[data-name=Unified] label {
-            /* color:#1c2050;
-            position: relative;
-            top: 25px;
-            right: -1px; */
+            
             display: none;
         }
 
         #api[data-name=Unified] #password {
-            width: 255px;
+            width: 350px;
             position: relative;
             top: 15px;
             right: -30px;
@@ -155,15 +139,16 @@
             position: relative;
             bottom: -70px;
             right: -75px;
-            padding-top: 100px;
         }
 
-
+        #api[data-name=Unified] .heading {
+      text-align: center;
+        }
 
         .new {
-            position: relative;
-            bottom: -30px;
-            left: 117px;
+            position: static;
+            text-align: center;
+            margin: 20 auto;
         }
     </style>
 </head>
@@ -185,6 +170,52 @@
                                             class="mt-1 mb-5 pb-1">We are Ribbit Learning</h4>
                                     </div>
                                         <div id="api" data-name="Unified">
+                                            <form id="localAccountForm" action="JavaScript:void(0);" class="localAccount"
+                                                aria-label="Sign in with your email address">
+                                                <div class="intro">
+                                                    <h2 aria-level="1">
+                                                        Sign in with your email address
+                                                    </h2>
+                                                </div>
+                                                <div class="error pageLevel" aria-hidden="true" role="alert" style="display: none;">
+                                                    <p></p>
+                                                </div>
+                                                <div class="entry">
+                                                    <div class="entry-item">
+                                                        <label for="email">
+                                                            Email Address
+                                                        </label>
+                                                        <div class="error itemLevel" aria-hidden="true" role="alert" style="display: none;">
+                                                            <p></p>
+                                                        </div>
+                                                        <input type="email" id="email" name="Email Address" title="Please enter a valid Email Address"
+                                                            pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"
+                                                            autofocus="" placeholder="Email Address" aria-label="Email Address">
+                                                    </div>
+                                                    <div class="entry-item">
+                                                        <div class="password-label">
+                                                            <label for="password">Password</label>
+                                                            <a id="forgotPassword"
+                                                                href="/ribbitlearningco.onmicrosoft.com/B2C_1_SignIn/api/CombinedSigninAndSignup/unified?claimsexchange=ForgotPassword&amp;csrf_token=N1orSEp0b0ZuRVdKSjJISXppd1h2SDdJaTVNbldrYmdEQXJnQU1Ya1lDcmdhcVh6MWhhc01HV0x1SnppNDBLOS9zMlAzcFQrMG91KzA4SFJqWG1VWkE9PTsyMDIyLTEwLTE0VDA0OjU2OjE1LjI0OTE2NDJaO2xOSSt1NFhtM1lEMjMwSHF2MmR5b2c9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiI1MDFlNWM2OS05NjE1LTRlODAtOWEzMC05NzRkNTkwYTUzNDgifQ&amp;p=B2C_1_SignIn">Forgot
+                                                                your password?</a>
+                                                        </div>
+                                                        <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                                                            <p role="alert"></p>
+                                                        </div>
+                                                        <input type="password" id="password" name="Password" placeholder="Password" aria-label="Password"
+                                                            autocomplete="current-password" aria-required="true">
+                                                    </div>
+                                                    <div class="working"></div>
+                                            
+                                            
+                                                    <div class="buttons">
+                                                        <button id="next" type="submit" form="localAccountForm">Sign
+                                                            in</button>
+                                                    </div>
+                                                </div>
+                                            
+                                            
+                                            </form>
                                         </div>
                                     </div>
                                 <div class="new">New to Ribbit?
